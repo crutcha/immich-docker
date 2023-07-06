@@ -37,6 +37,10 @@ services:
     env_file:
       - .env
     restart: always
+    deploy:
+      resources:
+        limits:
+          cpus: '1.0'
 
   immich-web:
     container_name: immich_web
